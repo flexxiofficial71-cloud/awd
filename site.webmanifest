@@ -1,0 +1,17 @@
+{
+  "name": "Clonex Esports",
+  "short_name": "Clonex",
+  "description": "Bangladesh's #1 trusted esports tournament platform for Free Fire and Ludo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066ff",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "clonex-esports",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clonex Esports tournament platform landing page and APK distribution",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e 'console.log(\"Build complete\")'",
+    "start": "node server.js",
+    "lint": "node -e 'process.exit(0)'"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.3.0"
+  }
+}

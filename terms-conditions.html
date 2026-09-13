@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+        if (g && g.fetch) {
+          var _fetch = g.fetch;
+          try {
+            Object.defineProperty(g, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(fn) { _fetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _fetch; },
+                set: function(fn) { _fetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions - Clonex Esports</title>
+  <meta name="description" content="Terms and Conditions for Clonex Esports - Rules of participation, fair play, wallet rules, and guidelines for Free Fire and Ludo tournaments.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header -->
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-brand">
+        <img src="assets/logo.png" alt="Clonex Esports Logo" class="legal-logo">
+        <div class="legal-brand-text">
+          <span class="legal-brand-title">CLONEX</span>
+          <span class="legal-brand-sub">ESPORTS</span>
+        </div>
+      </a>
+      <div class="legal-header-actions">
+        <a href="index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Home
+        </a>
+        <a href="assets/Clonex-Esports-v1.0.apk" download class="btn-apk-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4126 13.8533 8.082 12 8.082s-3.5902.3306-5.1367.8676L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+          </svg>
+          <span>Download</span> APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Document Container -->
+  <main class="legal-main">
+    <div class="legal-breadcrumbs">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Legal</span>
+      <span>/</span>
+      <span>Terms &amp; Conditions</span>
+    </div>
+
+    <div class="doc-header">
+      <div class="doc-badge">Official Legal Document</div>
+      <h1 class="doc-title">Terms &amp; Conditions</h1>
+      <div class="doc-meta">
+        <div class="doc-meta-item">
+          <strong>Entity:</strong> Clonex Esports
+        </div>
+        <div class="doc-meta-item">
+          <strong>Last Updated:</strong> September 10, 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-content">
+      <div class="legal-section">
+        <div class="section-body">
+          <p>Welcome to <strong>Clonex Esports</strong>. These Terms and Conditions govern your access to and use of the Clonex Esports mobile tournament application and associated services. By creating an account, downloading the app, or joining any Free Fire or Ludo tournament, you signify your agreement to these Terms.</p>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 01</div>
+        <h2 class="section-title">1. Eligibility &amp; User Accounts</h2>
+        <div class="section-body">
+          <ul>
+            <li><strong>Age Requirement:</strong> You must be at least 13 years of age (or the minimum legal age in your jurisdiction) to use Clonex Esports.</li>
+            <li><strong>Single Account Policy:</strong> Each player is permitted only one registered Clonex Esports account. Creating multiple accounts (multi-accounting) to claim bonuses or manipulate matchmaking results is strictly prohibited and results in immediate account suspension.</li>
+            <li><strong>Account Security:</strong> You are responsible for keeping your login credentials confidential and for all actions taken under your account.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 02</div>
+        <h2 class="section-title">2. Tournament Participation &amp; Match Rules</h2>
+        <div class="section-body">
+          <p>Clonex Esports hosts competitive esports tournaments for mobile games, primarily <strong>Garena Free Fire</strong> and <strong>Ludo King</strong>.</p>
+          <ul>
+            <li><strong>Room ID &amp; Password:</strong> Custom Room credentials are provided inside the Clonex App 10-15 minutes prior to match schedule. Do not share room credentials with non-registered players.</li>
+            <li><strong>Official Clients Only:</strong> Players must participate using official, unmodified game applications installed from authorized app stores. Third-party modded APKs, speed hacks, aimbots, auto-headshots, wallhacks, or scripts are permanently banned.</li>
+            <li><strong>Emulators &amp; Devices:</strong> Unless a specific tournament is explicitly labeled as an PC/Emulator match, all tournaments are strictly for mobile and tablet touchscreen devices.</li>
+            <li><strong>Fair Play &amp; Teaming:</strong> Teaming up with non-squad opponents in solo/duo matches, stream-sniping, or intentional match-throwing results in immediate disqualification and prize forfeiture.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 03</div>
+        <h2 class="section-title">3. Entry Fees, Wallets &amp; Top-Ups</h2>
+        <div class="section-body">
+          <ul>
+            <li><strong>Wallet System:</strong> Entry fees for paid tournaments are deducted directly from your Clonex Esports in-app wallet balance upon joining a match.</li>
+            <li><strong>Payment Gateways:</strong> Deposits can be completed via authorized mobile banking channels including <strong>bKash, Nagad, and Rocket</strong>. Players must accurately provide the sender phone number and Transaction ID (TrxID) for validation.</li>
+            <li><strong>Non-Transferable:</strong> Wallet balances cannot be transferred between player accounts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 04</div>
+        <h2 class="section-title">4. Match Verification &amp; Prize Payouts</h2>
+        <div class="section-body">
+          <ul>
+            <li><strong>Result Submission:</strong> Players must submit clear post-match screenshots or screen recordings showing kills and placement within the specified time window after match completion.</li>
+            <li><strong>Verification:</strong> Tournament admins review submitted evidence and spectator logs. Prize winnings are credited to the user's Clonex wallet within 1-3 hours of match completion.</li>
+            <li><strong>Withdrawal:</strong> Players may withdraw their tournament winnings to verified bKash, Nagad, or Rocket accounts. Withdrawals are processed within 1 to 24 hours.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 05</div>
+        <h2 class="section-title">5. Anti-Cheat Policy &amp; Account Termination</h2>
+        <div class="section-body">
+          <p>Clonex Esports maintains a strict zero-tolerance policy against cheating, abusive behavior, and financial fraud. We reserve the right to immediately suspend or terminate any account and forfeit associated balances if a player:</p>
+          <ul>
+            <li>Uses cheats, hacks, injectors, or macro scripts in tournament matches.</li>
+            <li>Submits fake or forged payment transaction screenshots.</li>
+            <li>Submits falsified match results or kills proof.</li>
+            <li>Harasses, abuses, or defrauds admins or fellow participants.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 06</div>
+        <h2 class="section-title">6. Intellectual Property &amp; Disclaimer</h2>
+        <div class="section-body">
+          <p>Garena, Free Fire, Ludo King, and all respective logos, game titles, and trademarks are the intellectual property of their respective copyright holders. Clonex Esports is an independent community esports tournament organizing platform and is not officially affiliated with or endorsed by Garena or Gametion.</p>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 07</div>
+        <h2 class="section-title">7. Contact &amp; Dispute Resolution</h2>
+        <div class="section-body">
+          <p>If you encounter match disputes, payment delays, or questions regarding these Terms, our official support channels are available 24/7:</p>
+          <div class="contact-box">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Email Support</div>
+                <a href="mailto:support@clonexesports.com" class="contact-link">support@clonexesports.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Telegram Help Desk</div>
+                <a href="https://t.me/ClonexEsports" target="_blank" class="contact-link">https://t.me/ClonexEsports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Strip -->
+    <div class="policy-nav-strip">
+      <a href="privacy-policy.html" class="policy-pill">Privacy Policy</a>
+      <a href="terms-conditions.html" class="policy-pill active">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html" class="policy-pill">Cookie Policy</a>
+      <a href="refund-policy.html" class="policy-pill">Refund &amp; Fair Play</a>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 Clonex Esports. All Rights Reserved. Dedicated to Fair, Secure Esports Gaming.</p>
+  </footer>
+</body>
+</html>

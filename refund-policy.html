@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+        if (g && g.fetch) {
+          var _fetch = g.fetch;
+          try {
+            Object.defineProperty(g, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(fn) { _fetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _fetch; },
+                set: function(fn) { _fetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund & Cancellation Policy - Clonex Esports</title>
+  <meta name="description" content="Refund, Cancellation and Fair Play Policy for Clonex Esports tournaments, wallet top-ups, and prize distributions.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header -->
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-brand">
+        <img src="assets/logo.png" alt="Clonex Esports Logo" class="legal-logo">
+        <div class="legal-brand-text">
+          <span class="legal-brand-title">CLONEX</span>
+          <span class="legal-brand-sub">ESPORTS</span>
+        </div>
+      </a>
+      <div class="legal-header-actions">
+        <a href="index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Home
+        </a>
+        <a href="assets/Clonex-Esports-v1.0.apk" download class="btn-apk-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4126 13.8533 8.082 12 8.082s-3.5902.3306-5.1367.8676L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+          </svg>
+          <span>Download</span> APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Document Container -->
+  <main class="legal-main">
+    <div class="legal-breadcrumbs">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Legal</span>
+      <span>/</span>
+      <span>Refund &amp; Fair Play</span>
+    </div>
+
+    <div class="doc-header">
+      <div class="doc-badge">Official Legal Document</div>
+      <h1 class="doc-title">Refund &amp; Cancellation Policy</h1>
+      <div class="doc-meta">
+        <div class="doc-meta-item">
+          <strong>Entity:</strong> Clonex Esports
+        </div>
+        <div class="doc-meta-item">
+          <strong>Last Updated:</strong> September 10, 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-content">
+      <div class="legal-section">
+        <div class="section-body">
+          <p>At <strong>Clonex Esports</strong>, transparency, fair competition, and player trust are our utmost priorities. This Refund and Cancellation Policy outlines the procedures for tournament cancellations, wallet refunds, and technical dispute resolutions.</p>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 01</div>
+        <h2 class="section-title">1. Match Cancellation &amp; Automatic Refunds</h2>
+        <div class="section-body">
+          <p>If an esports tournament match cannot be hosted as scheduled due to administrative or technical reasons:</p>
+          <ul>
+            <li><strong>Full 100% Refund:</strong> If a match is cancelled by Clonex Esports admins, the full entry fee is automatically refunded back to each registered participant's Clonex wallet within 15 minutes.</li>
+            <li><strong>Room Failure:</strong> If a Custom Room cannot be opened or if game servers (Free Fire or Ludo King) go into emergency maintenance before match start, all entry fees are completely refunded.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 02</div>
+        <h2 class="section-title">2. Player Cancellation &amp; Match Withdrawal</h2>
+        <div class="section-body">
+          <ul>
+            <li><strong>Before Room ID Generation:</strong> Players may cancel their tournament registration up to 20 minutes before match start time and receive an instant 100% wallet refund.</li>
+            <li><strong>After Room ID Delivery:</strong> Once the Custom Room ID and Password have been generated and displayed inside the App, tournament registration cannot be cancelled, as room slots are locked and reserved.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 03</div>
+        <h2 class="section-title">3. Disconnections &amp; Device Issues</h2>
+        <div class="section-body">
+          <p>Players are responsible for their own personal internet connection, device battery, and game client stability. Clonex Esports cannot issue refunds for individual network drops, high ping, game crashes, or failure to enter the room before the match countdown ends.</p>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 04</div>
+        <h2 class="section-title">4. Fair Play Violations &amp; Prize Forfeiture</h2>
+        <div class="section-body">
+          <p>Strict non-refund enforcement applies to players caught engaging in:</p>
+          <ul>
+            <li>Third-party hacks, mod menus, aimbots, or speed scripts.</li>
+            <li>Teaming with enemies in solo or duo matches.</li>
+            <li>Entering custom rooms with unregistered accounts or sharing room passwords.</li>
+          </ul>
+          <p style="margin-top: 0.75rem; color: #f87171;"><strong>Note:</strong> Players disqualified for fair play violations forfeit all entry fees, match rankings, and winnings without right to refund.</p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 05</div>
+        <h2 class="section-title">5. Wallet Top-Up &amp; Deposit Issues</h2>
+        <div class="section-body">
+          <p>If you sent money via bKash, Nagad, or Rocket but your in-app wallet balance was not updated:</p>
+          <ul>
+            <li>Verify you entered the correct Transaction ID (TrxID) and sender number.</li>
+            <li>If the balance is not reflected within 30 minutes, contact our Telegram Help Desk with a clear screenshot of your mobile banking SMS receipt. Our support team verifies and credits the balance manually.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 06</div>
+        <h2 class="section-title">6. Dispute Resolution Contact</h2>
+        <div class="section-body">
+          <p>All match disputes and refund inquiries must be submitted within 24 hours of match completion:</p>
+          <div class="contact-box">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Email Support</div>
+                <a href="mailto:support@clonexesports.com" class="contact-link">support@clonexesports.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Telegram Help Desk</div>
+                <a href="https://t.me/ClonexEsports" target="_blank" class="contact-link">https://t.me/ClonexEsports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Strip -->
+    <div class="policy-nav-strip">
+      <a href="privacy-policy.html" class="policy-pill">Privacy Policy</a>
+      <a href="terms-conditions.html" class="policy-pill">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html" class="policy-pill">Cookie Policy</a>
+      <a href="refund-policy.html" class="policy-pill active">Refund &amp; Fair Play</a>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 Clonex Esports. All Rights Reserved. Dedicated to Fair, Secure Esports Gaming.</p>
+  </footer>
+</body>
+</html>

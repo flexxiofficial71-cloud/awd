@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+        if (g && g.fetch) {
+          var _fetch = g.fetch;
+          try {
+            Object.defineProperty(g, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(fn) { _fetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _fetch; },
+                set: function(fn) { _fetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy - Clonex Esports</title>
+  <meta name="description" content="Cookie Policy for Clonex Esports - How we use cookies and local device storage to power our tournament platform.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header -->
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-brand">
+        <img src="assets/logo.png" alt="Clonex Esports Logo" class="legal-logo">
+        <div class="legal-brand-text">
+          <span class="legal-brand-title">CLONEX</span>
+          <span class="legal-brand-sub">ESPORTS</span>
+        </div>
+      </a>
+      <div class="legal-header-actions">
+        <a href="index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Home
+        </a>
+        <a href="assets/Clonex-Esports-v1.0.apk" download class="btn-apk-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4126 13.8533 8.082 12 8.082s-3.5902.3306-5.1367.8676L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+          </svg>
+          <span>Download</span> APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Document Container -->
+  <main class="legal-main">
+    <div class="legal-breadcrumbs">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Legal</span>
+      <span>/</span>
+      <span>Cookie Policy</span>
+    </div>
+
+    <div class="doc-header">
+      <div class="doc-badge">Official Legal Document</div>
+      <h1 class="doc-title">Cookie &amp; Tracking Policy</h1>
+      <div class="doc-meta">
+        <div class="doc-meta-item">
+          <strong>Entity:</strong> Clonex Esports
+        </div>
+        <div class="doc-meta-item">
+          <strong>Last Updated:</strong> September 10, 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-content">
+      <div class="legal-section">
+        <div class="section-body">
+          <p>This Cookie Policy explains how <strong>Clonex Esports</strong> ("we," "our," or "us") uses cookies, local storage, and similar technologies on our website and tournament application. We believe in complete transparency and minimal tracking focused strictly on platform performance and tournament security.</p>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 01</div>
+        <h2 class="section-title">1. What are Cookies and Local Storage?</h2>
+        <div class="section-body">
+          <p>Cookies are small text files placed on your device by websites that you visit. In mobile applications, local storage, cache, and device tokens serve a similar purpose to store session data, keep you signed in securely, and record app preferences.</p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 02</div>
+        <h2 class="section-title">2. How We Use Cookies</h2>
+        <div class="section-body">
+          <p>We use cookies and storage technologies strictly for functional and security purposes:</p>
+          <ul>
+            <li><strong>Essential Session Cookies:</strong> To keep you authenticated and verify your active tournament room access without having to re-login repeatedly.</li>
+            <li><strong>Security &amp; Anti-Fraud Storage:</strong> To identify suspicious multi-device activity, prevent unauthorized access to user wallet balances, and ensure fair play.</li>
+            <li><strong>Preferences:</strong> To remember your language and notification preferences (such as match starting alerts).</li>
+            <li><strong>Performance Telemetry:</strong> Anonymized crash reporting and page load timings to improve app reliability and match matchmaking speed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 03</div>
+        <h2 class="section-title">3. Third-Party Technologies</h2>
+        <div class="section-body">
+          <p>We do not use intrusive third-party advertising cookies. Third-party cookies or session storage may only be initiated by secure payment processors (e.g., payment gateways for bKash, Nagad, or Rocket) when you initiate a wallet transaction.</p>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 04</div>
+        <h2 class="section-title">4. Managing Your Preferences</h2>
+        <div class="section-body">
+          <p>Most web browsers automatically accept cookies, but you can modify your browser settings to decline cookies or alert you when a cookie is placed. In the Clonex Esports mobile application, you can clear app cache at any time via your device's Application Settings menu.</p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 05</div>
+        <h2 class="section-title">5. Contact Support</h2>
+        <div class="section-body">
+          <p>For questions or feedback regarding our cookie and tracking practices:</p>
+          <div class="contact-box">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Email Support</div>
+                <a href="mailto:support@clonexesports.com" class="contact-link">support@clonexesports.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Telegram Help Desk</div>
+                <a href="https://t.me/ClonexEsports" target="_blank" class="contact-link">https://t.me/ClonexEsports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Strip -->
+    <div class="policy-nav-strip">
+      <a href="privacy-policy.html" class="policy-pill">Privacy Policy</a>
+      <a href="terms-conditions.html" class="policy-pill">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html" class="policy-pill active">Cookie Policy</a>
+      <a href="refund-policy.html" class="policy-pill">Refund &amp; Fair Play</a>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 Clonex Esports. All Rights Reserved. Dedicated to Fair, Secure Esports Gaming.</p>
+  </footer>
+</body>
+</html>

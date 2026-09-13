@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+        if (g && g.fetch) {
+          var _fetch = g.fetch;
+          try {
+            Object.defineProperty(g, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(fn) { _fetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _fetch; },
+                set: function(fn) { _fetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Arena Not Found | Clonex Esports</title>
+  <meta name="description" content="The page or match room you are looking for does not exist on Clonex Esports. Return to home or download the official tournament app.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 24px 80px;
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, rgba(0, 102, 255, 0.08) 0%, transparent 60%), #ffffff;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 16vw, 160px);
+      font-weight: 900;
+      line-height: 0.95;
+      background: linear-gradient(135deg, #0066ff 0%, #0284c7 60%, #00d4ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+    .error-title {
+      font-family: var(--font-title);
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      color: var(--text-heading);
+      margin-bottom: 16px;
+    }
+    .error-desc {
+      font-size: 17px;
+      line-height: 28px;
+      color: var(--neutral-600);
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+    .error-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      border-radius: 9999px;
+      background: var(--brand-primary);
+      color: #ffffff;
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-return:hover {
+      background: var(--brand-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 102, 255, 0.45);
+      color: #ffffff;
+    }
+    .btn-support-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 28px;
+      border-radius: 9999px;
+      background: #ffffff;
+      border: 1.5px solid var(--neutral-200);
+      color: var(--text-heading);
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 800;
+      transition: all 0.2s ease;
+    }
+    .btn-support-pill:hover {
+      background: var(--brand-soft-bg);
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navbar -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="brand" title="Clonex Esports Home">
+        <img src="assets/logo.png" alt="Clonex Esports Logo" width="38" height="38" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">CLONEX</span>
+          <span class="brand-sub">ESPORTS</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link" style="font-weight: 700;">Back to Home</a>
+        <a href="assets/Clonex-Esports-v1.0.apk" download="Clonex-Esports-v1.0.apk" class="nav-apk-btn">
+          <span>Download APK</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="error-hero">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Match Arena Not Found</h1>
+      <p class="error-desc">
+        The tournament page, match bracket, or resource you are looking for has been concluded, moved, or does not exist.
+      </p>
+      <div class="error-actions">
+        <a href="index.html" class="btn-return">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Return to Homepage</span>
+        </a>
+        <a href="https://t.me/ClonexEsports" target="_blank" rel="noopener noreferrer" class="btn-support-pill">
+          <span>Telegram Support</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 1px solid var(--neutral-200); padding: 32px 24px; text-align: center; color: var(--neutral-500); font-size: 14px; background: var(--bg-section-alt);">
+    &copy; 2026 Clonex Esports. All rights reserved.
+  </footer>
+
+</body>
+</html>

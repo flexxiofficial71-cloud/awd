@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+        if (g && g.fetch) {
+          var _fetch = g.fetch;
+          try {
+            Object.defineProperty(g, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(fn) { _fetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _fetch; },
+                set: function(fn) { _fetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Clonex Esports</title>
+  <meta name="description" content="Privacy Policy for Clonex Esports - Learn how we collect, use, and safeguard your data for Free Fire and Ludo tournaments.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header -->
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-brand">
+        <img src="assets/logo.png" alt="Clonex Esports Logo" class="legal-logo">
+        <div class="legal-brand-text">
+          <span class="legal-brand-title">CLONEX</span>
+          <span class="legal-brand-sub">ESPORTS</span>
+        </div>
+      </a>
+      <div class="legal-header-actions">
+        <a href="index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Home
+        </a>
+        <a href="assets/Clonex-Esports-v1.0.apk" download class="btn-apk-small">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4126 13.8533 8.082 12 8.082s-3.5902.3306-5.1367.8676L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+          </svg>
+          <span>Download</span> APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Document Container -->
+  <main class="legal-main">
+    <div class="legal-breadcrumbs">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Legal</span>
+      <span>/</span>
+      <span>Privacy Policy</span>
+    </div>
+
+    <div class="doc-header">
+      <div class="doc-badge">Official Legal Document</div>
+      <h1 class="doc-title">Privacy Policy</h1>
+      <div class="doc-meta">
+        <div class="doc-meta-item">
+          <strong>Entity:</strong> Clonex Esports
+        </div>
+        <div class="doc-meta-item">
+          <strong>Last Updated:</strong> September 10, 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-content">
+      <div class="legal-section">
+        <div class="section-body">
+          <p>Welcome to <strong>Clonex Esports</strong>! This Privacy Policy explains how Clonex Esports ("we," "our," or "us") collects, uses, discloses, and safeguards your information when you use our mobile application (the "App") to participate in Free Fire and Ludo esports tournaments.</p>
+          <p>By accessing or using our App, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 01</div>
+        <h2 class="section-title">1. Information We Collect</h2>
+        <div class="section-body">
+          <p>We collect information to provide, maintain, and improve our tournament services.</p>
+          
+          <h3 style="font-size: 1.1rem; color: #fff; margin: 1.25rem 0 0.5rem;">Personal Information You Provide</h3>
+          <ul>
+            <li><strong>Account Information:</strong> Name, email address, phone number, and account credentials created during registration.</li>
+            <li><strong>Game Information:</strong> Game IDs, usernames, and in-game details (e.g., Free Fire UID/IGN, Ludo King/Game ID) to verify tournament participation, matches, and standings.</li>
+            <li><strong>Verification & Financial Details:</strong> Mobile wallet/payment account details (such as bKash, Nagad, Rocket, or bank accounts) collected strictly for processing tournament entry fees, prize payouts, and wallet top-ups.</li>
+          </ul>
+
+          <h3 style="font-size: 1.1rem; color: #fff; margin: 1.25rem 0 0.5rem;">Information Collected Automatically</h3>
+          <ul>
+            <li><strong>Device Information:</strong> Device model, operating system version, unique device identifiers, and IP address.</li>
+            <li><strong>App Usage Data:</strong> Application activity logs, error reports, performance data, and match submission details.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 02</div>
+        <h2 class="section-title">2. How We Use Your Information</h2>
+        <div class="section-body">
+          <p>We use the collected information for the following core purposes:</p>
+          <ul>
+            <li><strong>Tournament Administration:</strong> Organizing Free Fire and Ludo matches, publishing leaderboards, validating match results, and distributing prize money.</li>
+            <li><strong>Account Management:</strong> Creating and securing user accounts, tracking wallet balances, and handling deposits and withdrawals.</li>
+            <li><strong>Customer Support:</strong> Resolving technical queries, payment issues, and match disputes via our official support channels.</li>
+            <li><strong>Fraud Prevention & Security:</strong> Detecting cheating, multi-accounting, unapproved third-party software, or fraudulent financial activities to ensure fair play.</li>
+            <li><strong>Communication:</strong> Sending tournament notifications, room ID/password updates, policy updates, and security alerts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 03</div>
+        <h2 class="section-title">3. Disclosure & Sharing of Information</h2>
+        <div class="section-body">
+          <p>We value your privacy and do not sell your personal data. We only share information under the following circumstances:</p>
+          <ul>
+            <li><strong>Public Tournament Data:</strong> Your in-game username, match scores, rank, and leaderboard standings may be displayed publicly within the App.</li>
+            <li><strong>Payment Processors:</strong> Necessary transaction data is shared securely with third-party payment gateways (e.g., mobile banking providers) to process top-ups and payouts.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or government authority, or to protect the rights, property, and safety of Clonex Esports and its users.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 04</div>
+        <h2 class="section-title">4. Data Security</h2>
+        <div class="section-body">
+          <p>We implement reasonable administrative, technical, and physical security measures to safeguard your personal information against unauthorized access, loss, misuse, or alteration. However, no electronic transmission over the internet or storage system can be guaranteed to be 100% secure.</p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 05</div>
+        <h2 class="section-title">5. Data Retention & Deletion</h2>
+        <div class="section-body">
+          <p>We retain your personal information for as long as your account remains active or as needed to provide tournament services, prevent fraud, and comply with legal obligations. You may request account deletion or the removal of your personal data at any time by contacting us through our official support channels.</p>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 06</div>
+        <h2 class="section-title">6. Children's Privacy</h2>
+        <div class="section-body">
+          <p>Clonex Esports is not intended for use by children under the age of 13 (or the legal age of digital consent in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided us with personal information, please contact us so we can promptly delete it.</p>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 07</div>
+        <h2 class="section-title">7. Changes to This Privacy Policy</h2>
+        <div class="section-body">
+          <p>We may update this Privacy Policy periodically to reflect changes in our practices or operational, legal, or regulatory requirements. We will notify you of any material changes by updating the "Last Updated" date at the top of this policy or via in-app notifications.</p>
+        </div>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="legal-section">
+        <div class="section-num">SECTION 08</div>
+        <h2 class="section-title">8. Contact Us & Support</h2>
+        <div class="section-body">
+          <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out to us:</p>
+          <div class="contact-box">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Email Support</div>
+                <a href="mailto:support@clonexesports.com" class="contact-link">support@clonexesports.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Telegram Help Desk</div>
+                <a href="https://t.me/ClonexEsports" target="_blank" class="contact-link">https://t.me/ClonexEsports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Strip -->
+    <div class="policy-nav-strip">
+      <a href="privacy-policy.html" class="policy-pill active">Privacy Policy</a>
+      <a href="terms-conditions.html" class="policy-pill">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html" class="policy-pill">Cookie Policy</a>
+      <a href="refund-policy.html" class="policy-pill">Refund &amp; Fair Play</a>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 Clonex Esports. All Rights Reserved. Dedicated to Fair, Secure Esports Gaming.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Clonex Esports",
+  "description": "Clonex Esports is Bangladesh's #1 trusted esports tournament platform for Free Fire and Ludo. Join daily custom rooms, compete against top players, and win real cash with instant bKash & Nagad payouts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

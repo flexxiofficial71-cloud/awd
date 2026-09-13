@@ -1,0 +1,13 @@
+# ==========================================================
+# CLONEX ESPORTS - ROBOTS.TXT
+# Website: https://clonexesports.com/
+# ==========================================================
+
+User-agent: *
+Allow: /
+
+# Direct download binary - crawl protection
+Disallow: /assets/Clonex-Esports-v1.0.apk$
+
+# XML Sitemap Location
+Sitemap: https://clonexesports.com/sitemap.xml

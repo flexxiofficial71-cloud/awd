@@ -1,0 +1,483 @@
+/* ==========================================================
+   CLONEX ESPORTS - LEGAL & POLICY PAGES (WHITE & BLUE THEME)
+   Aesthetic: Ultra-Clean White & Blue, Generous Modern Spacing
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-surface: #f8fbff;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --border-hover: #0066ff;
+
+  --text-heading: #0b192c;
+  --text-primary: #0b192c;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --brand-primary: #0066ff;
+  --brand-hover: #004edb;
+  --brand-soft-bg: #f0f7ff;
+  --brand-light-border: #dbeafe;
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  line-height: 1.85;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Sky Blue Ambient Glows */
+.bg-glow-1 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 550px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow-2 {
+  position: absolute;
+  top: 80px;
+  right: 10%;
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Fixed Header / Top Bar */
+.legal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px -2px rgba(11, 25, 44, 0.04);
+}
+
+.legal-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.15rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legal-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.legal-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: contain;
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.12);
+}
+
+.legal-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.legal-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-heading);
+}
+
+.legal-brand-sub {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+}
+
+.legal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-heading);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.btn-back:hover {
+  background: var(--brand-soft-bg);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  transform: translateX(-2px);
+}
+
+.btn-apk-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: var(--brand-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-apk-small:hover {
+  background: var(--brand-hover);
+  box-shadow: 0 6px 18px rgba(0, 102, 255, 0.45);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+/* Main Container with Generous Spacing */
+.legal-main {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 150px 24px 110px;
+}
+
+/* Breadcrumbs */
+.legal-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 2.75rem;
+}
+
+.legal-breadcrumbs a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.legal-breadcrumbs a:hover {
+  color: var(--brand-primary);
+}
+
+.legal-breadcrumbs span {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* Document Header */
+.doc-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.doc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background: var(--brand-soft-bg);
+  border: 1px solid var(--brand-light-border);
+  color: var(--brand-primary);
+  font-size: 0.825rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.doc-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+}
+
+.doc-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.doc-meta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.doc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.doc-meta-item strong {
+  color: var(--text-heading);
+}
+
+/* Content Sections - Clean Elevated White & Blue Cards */
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.legal-section {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 3rem 3.25rem;
+  box-shadow: 0 4px 20px -2px rgba(11, 25, 44, 0.04), 0 1px 3px rgba(11, 25, 44, 0.02);
+  transition: all 0.25s ease;
+}
+
+.legal-section:hover {
+  border-color: var(--brand-primary);
+  box-shadow: 0 20px 42px -6px rgba(0, 102, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.section-num {
+  font-family: var(--font-heading);
+  color: var(--brand-primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.015em;
+}
+
+.section-body p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.85;
+}
+
+.section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.section-body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 1.5rem 0;
+}
+
+.section-body ul li {
+  position: relative;
+  padding-left: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.section-body ul li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: var(--brand-primary);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.section-body strong {
+  color: var(--text-heading);
+}
+
+/* Contact / Support Card */
+.contact-box {
+  background: var(--brand-soft-bg);
+  border: 1px solid var(--brand-light-border);
+  border-radius: 20px;
+  padding: 2.25rem 2.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid var(--brand-light-border);
+  color: var(--brand-primary);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.contact-link {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: var(--brand-hover);
+}
+
+/* Navigation Links to other policies */
+.policy-nav-strip {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.policy-pill {
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s;
+}
+
+.policy-pill:hover, .policy-pill.active {
+  background: var(--brand-soft-bg);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+/* Legal Footer */
+.legal-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border-color);
+  background: #ffffff;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.legal-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  color: var(--brand-primary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .legal-header-inner {
+    padding: 0.85rem 1.25rem;
+  }
+  .legal-main {
+    padding: 110px 1.25rem 70px;
+  }
+  .legal-section {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+  .contact-box {
+    padding: 1.75rem 1.5rem;
+  }
+  .btn-apk-small span {
+    display: none;
+  }
+  .doc-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
