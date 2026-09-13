@@ -650,7 +650,7 @@
             <polyline points="15 3 21 3 21 9"></polyline>
             <line x1="10" y1="14" x2="21" y2="3"></line>
           </svg>
-          <span>View Site (ওয়েবসাইট দেখুন)</span>
+          <span>View Live Site</span>
         </a>
         <button class="btn-logout" id="btnLogout" style="display: none;" onclick="logoutAdmin()">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -675,7 +675,7 @@
         </svg>
       </div>
       <h1 class="auth-title">Admin Login</h1>
-      <p class="auth-desc">প্যানেলে প্রবেশ করতে আপনার অ্যাডমিন পিন বা পাসওয়ার্ড প্রদান করুন। (Default PIN: <strong>admin123</strong>)</p>
+      <p class="auth-desc">Enter your administrator PIN or password to access the panel.</p>
       
       <form id="loginForm" onsubmit="handleLogin(event)">
         <input type="password" id="loginPinInput" class="auth-input" placeholder="Enter Admin PIN" required autocomplete="current-password">
@@ -721,8 +721,8 @@
               </svg>
             </div>
             <div>
-              <h2 class="card-title">APK Download Settings (এপিকে ডাউনলোড অপশন)</h2>
-              <p class="card-subtitle">আপনি চাইলে সরাসরি সার্ভারে নতুন APK আপলোড করতে পারেন অথবা বাহ্যিক কোনো ডাউনলোড লিঙ্ক দিতে পারেন।</p>
+              <h2 class="card-title">APK Download Settings</h2>
+              <p class="card-subtitle">Upload a new APK package directly to the server or provide an external download link.</p>
             </div>
           </div>
           <div class="status-badge" id="activeSourceBadge">
@@ -736,30 +736,30 @@
           <div class="toggle-option active" id="optionFile" onclick="setApkSourceType('file')">
             <input type="radio" name="apkSourceType" id="radioFile" value="file" class="toggle-radio" checked>
             <div class="toggle-content">
-              <h4>Direct APK File Upload (এপিকে ফাইল আপলোড)</h4>
-              <p>আপনার ডিভাইস থেকে সরাসরি .apk ফাইল আপলোড করুন। ইউজাররা এটি ওয়েবসাইট থেকে এক ক্লিকে ডাউনলোড করতে পারবে।</p>
+              <h4>Direct APK File Upload</h4>
+              <p>Upload a .apk file directly from your device. Users will download it from the website with one click.</p>
             </div>
           </div>
 
           <div class="toggle-option" id="optionUrl" onclick="setApkSourceType('url')">
             <input type="radio" name="apkSourceType" id="radioUrl" value="url" class="toggle-radio">
             <div class="toggle-content">
-              <h4>External Direct URL Link (ডাইরেক্ট লিঙ্ক)</h4>
-              <p>Google Drive, Dropbox, Mediafire বা ক্লাউড CDN এর কোনো সরাসরি ডাউনলোড লিঙ্ক এখানে সেট করুন।</p>
+              <h4>External Direct URL Link</h4>
+              <p>Specify a direct download link from Google Drive, Dropbox, Mediafire, or a cloud CDN.</p>
             </div>
           </div>
         </div>
 
         <!-- Section for Direct URL -->
         <div id="urlInputContainer" style="display: none;" class="form-group">
-          <label class="form-label" for="apkDirectUrlInput">External Direct Download Link (ডাইরেক্ট ডাউনলোড লিঙ্ক):</label>
+          <label class="form-label" for="apkDirectUrlInput">External Direct Download Link:</label>
           <input type="url" id="apkDirectUrlInput" class="form-input" placeholder="https://example.com/download/Clonex-Esports.apk">
-          <p class="form-hint">ইউজার ওয়েবসাইটের "Download APK" বাটনে চাপ দিলে সরাসরি এই লিঙ্কে রিডাইরেক্ট হবে।</p>
+          <p class="form-hint">Users clicking "Download APK" on the website will be redirected to this link.</p>
         </div>
 
         <!-- Section for File Upload -->
         <div id="fileUploadContainer" class="form-group">
-          <label class="form-label">Upload New APK File (নতুন এপিকে ফাইল আপলোড করুন):</label>
+          <label class="form-label">Upload New APK File:</label>
           
           <div class="dropzone" id="apkDropzone">
             <input type="file" id="apkFileInput" accept=".apk" style="display: none;" onchange="handleFileSelected(event)">
@@ -808,9 +808,9 @@
 
         <!-- Version Label -->
         <div class="form-group" style="margin-top: 16px;">
-          <label class="form-label" for="apkVersionInput">Version Badge Display (ওয়েবসাইটে প্রদর্শিত ভার্সন):</label>
+          <label class="form-label" for="apkVersionInput">Version Badge Display:</label>
           <input type="text" id="apkVersionInput" class="form-input" placeholder="e.g. v1.0, v1.2" style="max-width: 260px;">
-          <p class="form-hint">এটি ওয়েবসাইটের ডাউনলোড বাটনে "v1.0 FREE" হিসেবে দেখাবে।</p>
+          <p class="form-hint">Displayed on website download buttons (e.g. "v1.0 FREE").</p>
         </div>
       </section>
 
@@ -824,32 +824,32 @@
               </svg>
             </div>
             <div>
-              <h2 class="card-title">Telegram &amp; Support Channels (টেলিগ্রাম ও সাপোর্ট সেটিংস)</h2>
-              <p class="card-subtitle">টেলিগ্রাম চ্যানেলের লিঙ্ক এবং কাস্টমার সাপোর্টের ইমেইল অ্যাড্রেস পরিবর্তন করুন।</p>
+              <h2 class="card-title">Telegram &amp; Support Channels</h2>
+              <p class="card-subtitle">Update your official Telegram channel link and customer support email address.</p>
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="telegramUrlInput">Telegram Channel / Support Link (টেলিগ্রাম লিঙ্ক):</label>
+          <label class="form-label" for="telegramUrlInput">Telegram Channel / Support Link:</label>
           <div style="display: flex; gap: 8px;">
             <input type="url" id="telegramUrlInput" class="form-input" placeholder="https://t.me/ClonexEsports" required>
             <a href="#" id="btnTestTelegram" target="_blank" class="btn-secondary" style="white-space: nowrap;">
               Open Link
             </a>
           </div>
-          <p class="form-hint">ওয়েবসাইটের হেডার, মেনু ড্রয়ার এবং ফুটারে এই টেলিগ্রাম লিঙ্কটি আপডেট হবে।</p>
+          <p class="form-hint">Updates the Telegram link across the header, menu drawer, and footer.</p>
         </div>
 
         <div class="form-group" style="margin-top: 16px;">
-          <label class="form-label" for="supportEmailInput">Customer Support Email (সাপোর্ট ইমেইল):</label>
+          <label class="form-label" for="supportEmailInput">Customer Support Email:</label>
           <div style="display: flex; gap: 8px;">
             <input type="email" id="supportEmailInput" class="form-input" placeholder="support@clonexesports.com" required>
             <a href="#" id="btnTestEmail" class="btn-secondary" style="white-space: nowrap;">
               Mailto
             </a>
           </div>
-          <p class="form-hint">ইউজার সাপোর্ট চাইলে এই ঠিকানায় ইমেইল পাঠাতে পারবে।</p>
+          <p class="form-hint">Users will send support queries to this email address.</p>
         </div>
       </section>
 
@@ -864,8 +864,8 @@
               </svg>
             </div>
             <div>
-              <h2 class="card-title">Security PIN (অ্যাডমিন পাসওয়ার্ড পরিবর্তন)</h2>
-              <p class="card-subtitle">ভবিষ্যতে এই অ্যাডমিন প্যানেলে লগইন করার পিন পরিবর্তন করুন।</p>
+              <h2 class="card-title">Security PIN / Password</h2>
+              <p class="card-subtitle">Change the administrative PIN required to access this control panel.</p>
             </div>
           </div>
         </div>
@@ -873,7 +873,7 @@
         <div class="form-group" style="max-width: 320px;">
           <label class="form-label" for="adminPinChangeInput">Change Admin PIN / Password:</label>
           <input type="text" id="adminPinChangeInput" class="form-input" placeholder="Leave blank to keep unchanged">
-          <p class="form-hint">অপরিবর্তিত রাখতে চাইলে খালি রাখুন।</p>
+          <p class="form-hint">Leave blank to keep current PIN unchanged.</p>
         </div>
       </section>
 
@@ -885,7 +885,7 @@
             <polyline points="17 21 17 13 7 13 7 21"></polyline>
             <polyline points="7 3 7 8 15 8"></polyline>
           </svg>
-          <span>Save Changes (সব পরিবর্তন সংরক্ষণ করুন)</span>
+          <span>Save Changes</span>
         </button>
       </div>
 
@@ -965,11 +965,11 @@
         if (res.ok && data.success) {
           authToken = data.token;
           localStorage.setItem('clonex_admin_token', authToken);
-          showToast('Login successful! স্বাগতম অ্যাডমিন।', 'success');
+          showToast('Login successful! Welcome Admin.', 'success');
           await loadSettings();
           showDashboard();
         } else {
-          showToast(data.error || 'ভুল পিন প্রদান করা হয়েছে!', 'error');
+          showToast(data.error || 'Invalid PIN or password provided!', 'error');
         }
       } catch (err) {
         showToast('Login connection failed: ' + err.message, 'error');
@@ -1151,7 +1151,7 @@
             const data = JSON.parse(xhr.responseText);
             currentSettings = data;
             populateUI();
-            showToast('APK file uploaded and set active! সফলভাবে এপিকে আপলোড হয়েছে।', 'success');
+            showToast('APK file uploaded and set active!', 'success');
             setTimeout(() => {
               progressWrap.style.display = 'none';
             }, 1200);
@@ -1218,7 +1218,7 @@
           currentSettings = data.settings;
           populateUI();
           document.getElementById('adminPinChangeInput').value = '';
-          showToast('Settings saved successfully! সমস্ত সেটিংস ওয়েবসাইটে কার্যকর হয়েছে।', 'success');
+          showToast('Settings saved successfully!', 'success');
         } else {
           showToast(data.error || 'Failed to save settings', 'error');
         }
@@ -1232,7 +1232,7 @@
             <polyline points="17 21 17 13 7 13 7 21"></polyline>
             <polyline points="7 3 7 8 15 8"></polyline>
           </svg>
-          <span>Save Changes (সব পরিবর্তন সংরক্ষণ করুন)</span>
+          <span>Save Changes</span>
         `;
       }
     }

@@ -112,7 +112,7 @@ app.post('/api/admin/login', express.json(), (req, res) => {
     currentSessionToken = crypto.randomBytes(32).toString('hex');
     return res.json({ success: true, token: currentSessionToken });
   }
-  return res.status(401).json({ success: false, error: 'ভুল পিন বা পাসওয়ার্ড প্রদান করা হয়েছে!' });
+  return res.status(401).json({ success: false, error: 'Invalid PIN or password provided!' });
 });
 
 // Middleware for Admin Auth

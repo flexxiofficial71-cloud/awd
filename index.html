@@ -137,10 +137,14 @@
 
         <!-- Mobile Menu Toggle -->
         <button class="nav-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
@@ -253,7 +257,7 @@
           <p class="section-desc">We built Clonex Esports so gamers can compete fairly, enjoy every match, and withdraw cash rewards without any hassle.</p>
         </div>
 
-        <div class="why-grid">
+        <div class="why-grid" id="whyGrid">
           <!-- Card 1: Instant Cashout -->
           <div class="why-card">
             <div class="why-icon-pod">
@@ -348,7 +352,7 @@
           <p class="section-desc">Getting started takes less than 60 seconds. Download the app, enter a match, and collect your cash prizes.</p>
         </div>
 
-        <div class="how-grid">
+        <div class="how-grid" id="howGrid">
           <!-- Step 1 -->
           <div class="how-card">
             <div class="how-card-top">
@@ -435,7 +439,7 @@
           <p class="section-desc">Fast, secure, and built for smooth competitive gaming.</p>
         </div>
 
-        <div class="features-grid">
+        <div class="features-grid" id="featuresGrid">
           <div class="feature-card">
             <div class="feat-icon-pod">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -498,6 +502,12 @@
       <!-- Pre-Footer Banner -->
       <div class="cta-banner">
         <div class="cta-content">
+          <div class="cta-pill-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4126 13.8533 8.082 12 8.082s-3.5902.3306-5.1367.8676L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+            </svg>
+            <span>OFFICIAL ANDROID RELEASE</span>
+          </div>
           <h2 class="cta-title">Ready to Dominate the Battlefield?</h2>
           <p class="cta-desc">Download Clonex Esports v1.0 today. Join over 50,000 players and win real cash in every single custom match.</p>
         </div>
@@ -512,7 +522,7 @@
       <!-- 4-Column Structured Footer -->
       <div class="footer-grid">
         <!-- Col 1: Brand Info -->
-        <div class="footer-col">
+        <div class="footer-col footer-col-brand">
           <div class="brand" style="margin-bottom: 16px;">
             <img src="assets/logo.png" alt="Clonex Esports" width="34" height="34" class="brand-logo">
             <div class="brand-text">
@@ -533,7 +543,7 @@
         </div>
 
         <!-- Col 2: Navigation Links -->
-        <div class="footer-col">
+        <div class="footer-col footer-col-nav">
           <div class="footer-col-title">Navigation</div>
           <div class="footer-links">
             <a href="#home">Home</a>
@@ -545,7 +555,7 @@
         </div>
 
         <!-- Col 3: Legal & Security -->
-        <div class="footer-col">
+        <div class="footer-col footer-col-legal">
           <div class="footer-col-title">Legal &amp; Policies</div>
           <div class="footer-links">
             <a href="privacy-policy.html">Privacy Policy</a>
@@ -556,7 +566,7 @@
         </div>
 
         <!-- Col 4: Community & Help -->
-        <div class="footer-col">
+        <div class="footer-col footer-col-community">
           <div class="footer-col-title">Community &amp; Help</div>
           <div class="footer-links" style="margin-bottom: 16px;">
             <p style="font-size: 13.5px; color: var(--neutral-400);">Join our official channels for match schedules, room notifications, and 24/7 support.</p>
@@ -595,6 +605,7 @@
     if (mobileMenuBtn && mobileDrawer) {
       mobileMenuBtn.addEventListener('click', () => {
         const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active', isOpen);
         mobileMenuBtn.setAttribute('aria-expanded', isOpen);
       });
     }
@@ -604,6 +615,7 @@
         mobileDrawer.classList.remove('active');
       }
       if (mobileMenuBtn) {
+        mobileMenuBtn.classList.remove('active');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
       }
     }
@@ -616,6 +628,191 @@
         }
       }
     });
+
+    // Automatic horizontal swipe carousel with touch & mouse drag support
+    function initHorizontalAutoScroll(id, intervalMs = 2800) {
+      const slider = document.getElementById(id);
+      if (!slider) return;
+
+      let currentIndex = 0;
+      let autoTimer = null;
+      let isInteracting = false;
+      let resumeTimer = null;
+      let isAnimating = false;
+
+      function getCards() {
+        return Array.from(slider.querySelectorAll('.why-card, .how-card, .feature-card'));
+      }
+
+      // Smooth custom easing animation using requestAnimationFrame
+      function smoothScrollTo(targetLeft, duration = 600) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        const startLeft = slider.scrollLeft;
+        const distance = targetLeft - startLeft;
+        if (Math.abs(distance) < 2) {
+          isAnimating = false;
+          return;
+        }
+        const startTime = performance.now();
+
+        function step(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // easeInOutCubic for silky smooth deceleration
+          const ease = progress < 0.5 
+            ? 4 * progress * progress * progress 
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          slider.scrollLeft = startLeft + (distance * ease);
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            slider.scrollLeft = targetLeft;
+            isAnimating = false;
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      function slideNext() {
+        if (isInteracting || isAnimating) return;
+        const cards = getCards();
+        if (cards.length <= 1) return;
+
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        if (maxScroll <= 4) return;
+
+        currentIndex++;
+        if (currentIndex >= cards.length) {
+          currentIndex = 0;
+        }
+
+        const targetCard = cards[currentIndex];
+        let targetLeft = targetCard.offsetLeft - slider.offsetLeft;
+        if (targetLeft < 0) targetLeft = 0;
+        if (targetLeft > maxScroll) targetLeft = maxScroll;
+
+        smoothScrollTo(targetLeft, 600);
+      }
+
+      function startTimer() {
+        stopTimer();
+        autoTimer = setInterval(slideNext, intervalMs);
+      }
+
+      function stopTimer() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
+      function userPause() {
+        isInteracting = true;
+        stopTimer();
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(() => {
+          isInteracting = false;
+          syncCurrentIndex();
+          startTimer();
+        }, 2500);
+      }
+
+      function syncCurrentIndex() {
+        const cards = getCards();
+        const current = slider.scrollLeft;
+        let closestIdx = 0;
+        let minDiff = Infinity;
+        cards.forEach((card, idx) => {
+          const diff = Math.abs((card.offsetLeft - slider.offsetLeft) - current);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIdx = idx;
+          }
+        });
+        currentIndex = closestIdx;
+      }
+
+      // Mouse hover pause on desktop
+      slider.addEventListener('mouseenter', () => {
+        isInteracting = true;
+        stopTimer();
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isInteracting = false;
+        syncCurrentIndex();
+        startTimer();
+      });
+
+      // Touch handling: only pause on horizontal swipe (not vertical scroll)
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let isHorizontalSwipe = false;
+
+      slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].pageX;
+        touchStartY = e.touches[0].pageY;
+        isHorizontalSwipe = false;
+      }, { passive: true });
+
+      slider.addEventListener('touchmove', (e) => {
+        const dx = Math.abs(e.touches[0].pageX - touchStartX);
+        const dy = Math.abs(e.touches[0].pageY - touchStartY);
+        if (dx > dy && dx > 8) {
+          isHorizontalSwipe = true;
+          userPause();
+        }
+      }, { passive: true });
+
+      slider.addEventListener('touchend', () => {
+        if (isHorizontalSwipe) {
+          userPause();
+        }
+      }, { passive: true });
+
+      // Mouse drag support
+      let isMouseDown = false;
+      let dragStartX = 0;
+      let dragScrollLeft = 0;
+
+      slider.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        userPause();
+        slider.classList.add('dragging');
+        dragStartX = e.pageX - slider.offsetLeft;
+        dragScrollLeft = slider.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isMouseDown) {
+          isMouseDown = false;
+          slider.classList.remove('dragging');
+          userPause();
+        }
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - dragStartX) * 1.5;
+        slider.scrollLeft = dragScrollLeft - walk;
+      });
+
+      // Start automatic sliding after initial 1.2s delay
+      setTimeout(() => {
+        startTimer();
+      }, 1200);
+    }
+
+    initHorizontalAutoScroll('whyGrid', 2600);
+    initHorizontalAutoScroll('howGrid', 3000);
+    initHorizontalAutoScroll('featuresGrid', 3400);
 
     // Dynamic Settings Sync from Admin Panel
     async function syncDynamicSettings() {
