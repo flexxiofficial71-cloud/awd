@@ -1,0 +1,12 @@
+[
+  {
+    "ip": "103.146.150.79",
+    "addedAt": "2026-09-14T07:58:00.000Z",
+    "label": "Administrator (Primary IP)"
+  },
+  {
+    "ip": "127.0.0.1",
+    "addedAt": "2026-09-14T07:58:00.000Z",
+    "label": "Localhost / Internal System"
+  }
+]

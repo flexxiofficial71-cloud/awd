@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>403 Forbidden - Access Denied | Clonex Security</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --card-bg: #0e121b;
+      --card-border: #222938;
+      --accent-red: #ef4444;
+      --accent-red-glow: rgba(239, 68, 68, 0.25);
+      --crimson-soft: rgba(239, 68, 68, 0.12);
+      --text-white: #f8fafc;
+      --text-dim: #94a3b8;
+      --text-muted: #64748b;
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient background grid */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(239, 68, 68, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(239, 68, 68, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Radial glow */
+    body::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .blocked-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 680px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 44px 36px;
+      box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.7), 0 0 35px var(--crimson-soft);
+      text-align: center;
+      animation: cardPulse 3s infinite ease-in-out;
+    }
+
+    @keyframes cardPulse {
+      0%, 100% { border-color: rgba(239, 68, 68, 0.3); }
+      50% { border-color: rgba(239, 68, 68, 0.7); }
+    }
+
+    .badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--crimson-soft);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: var(--accent-red);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-red);
+      box-shadow: 0 0 10px var(--accent-red);
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    .alert-icon-pod {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+      box-shadow: 0 0 25px var(--accent-red-glow);
+    }
+
+    .headline {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5vw, 34px);
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .headline .highlight-red {
+      color: var(--accent-red);
+      text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    }
+
+    .roast-desc {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Terminal Dossier Box */
+    .dossier-box {
+      background: #06080d;
+      border: 1px solid #1a2233;
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 28px;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+
+    .dossier-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1a2233;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      color: var(--text-muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dossier-header-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+    }
+
+    @media (max-width: 560px) {
+      .dossier-grid {
+        grid-template-columns: 1fr;
+      }
+      .blocked-card {
+        padding: 32px 20px;
+      }
+    }
+
+    .dossier-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .dossier-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .dossier-val {
+      color: #e2e8f0;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .dossier-val.danger {
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+
+    /* Notice & Action */
+    .warning-notice {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: #1e293b;
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      transition: all 0.2s ease;
+    }
+
+    .btn-return:hover {
+      background: #334155;
+      border-color: #475569;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blocked-card">
+    <div class="badge-wrap">
+      <span class="badge-dot"></span>
+      <span>SECURITY PROTOCOL 403 // INTRUSION BLOCKED</span>
+    </div>
+
+    <div class="alert-icon-pod">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+    </div>
+
+    <h1 class="headline">
+      You are an <span class="highlight-red">absolute fool</span>, and your actions make it blatantly obvious.
+    </h1>
+
+    <p class="roast-desc">
+      Did you genuinely believe you could sneak into this administrator portal undetected? 
+      You are not a hacker; you are just a clueless amateur leaving your digital footprints all over our audit trail. 
+      Your access has been permanently terminated.
+    </p>
+
+    <div class="dossier-box">
+      <div class="dossier-header">
+        <div class="dossier-header-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          CAPTURED INTRUDER DOSSIER
+        </div>
+        <span id="incidentId">INCIDENT #SEC-7749</span>
+      </div>
+
+      <div class="dossier-grid">
+        <div class="dossier-item">
+          <span class="dossier-label">Offender IP Address</span>
+          <span class="dossier-val danger" id="clientIp">Detecting...</span>
+        </div>
+        <div class="dossier-item">
+          <span class="dossier-label">Access State</span>
+          <span class="dossier-val danger">BLACKLISTED & DENIED</span>
+        </div>
+        <div class="dossier-item" style="grid-column: 1 / -1;">
+          <span class="dossier-label">Infraction Reason</span>
+          <span class="dossier-val danger" id="incidentReason">DevTools Inspection / Unauthorized Access Detected</span>
+        </div>
+        <div class="dossier-item">
+          <span class="dossier-label">Detected Device & OS</span>
+          <span class="dossier-val" id="clientDevice">Parsing environment...</span>
+        </div>
+        <div class="dossier-item">
+          <span class="dossier-label">Client User-Agent</span>
+          <span class="dossier-val" id="clientBrowser">Analyzing...</span>
+        </div>
+        <div class="dossier-item" style="grid-column: 1 / -1;">
+          <span class="dossier-label">Timestamp of Infraction</span>
+          <span class="dossier-val" id="incidentTimestamp">--</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="warning-notice">
+      Your IP address, browser fingerprint, and network routing have been appended to our immutable security audit logs. 
+      Continued attempts against this endpoint will result in automated firewall bans and abuse complaints filed with your ISP.
+    </p>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+      <a href="/" class="btn-return">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span>Return to Clonex Esports Homepage</span>
+      </a>
+
+      <!-- Emergency Admin Unlock Trigger -->
+      <button type="button" onclick="showAdminUnlockModal()" style="background: none; border: none; color: var(--text-muted); font-size: 12.5px; text-decoration: underline; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#64748b'">
+        Authorized Administrator? Enter Master PIN to Unblock
+      </button>
+    </div>
+  </div>
+
+  <!-- Admin Emergency Unlock Modal -->
+  <div id="adminUnlockModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #0e121b; border: 1px solid #222938; border-radius: 20px; max-width: 420px; width: 100%; padding: 28px; box-shadow: 0 25px 60px rgba(0,0,0,0.9); text-align: left;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; color: #38bdf8; font-weight: 700; font-size: 16px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Administrator Emergency Unlock</span>
+        </div>
+        <button onclick="closeAdminUnlockModal()" style="background:none; border:none; color:#64748b; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.5; margin-bottom: 20px;">
+        If you are the website administrator and accidentally triggered the anti-tamper shield, enter your Master PIN below to immediately remove this IP from the blacklist and access the dashboard.
+      </p>
+      <form onsubmit="handleEmergencyUnlock(event)">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 12px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Master Admin PIN:</label>
+          <input type="password" id="adminPinInput" placeholder="Enter Admin PIN" required style="width: 100%; padding: 12px 16px; background: #07090e; border: 1.5px solid #334155; border-radius: 10px; color: #ffffff; font-size: 15px; outline: none; font-family: monospace;">
+        </div>
+        <div id="unlockErrorMsg" style="color: #ef4444; font-size: 13px; margin-bottom: 14px; display: none;"></div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" onclick="closeAdminUnlockModal()" style="padding: 10px 18px; border-radius: 8px; background: #1e293b; color: #cbd5e1; border: 1px solid #334155; font-size: 14px; font-weight: 600; cursor: pointer;">Cancel</button>
+          <button type="submit" id="btnSubmitUnlock" style="padding: 10px 20px; border-radius: 8px; background: #0284c7; color: #ffffff; border: none; font-size: 14px; font-weight: 700; cursor: pointer;">Verify &amp; Unblock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showAdminUnlockModal() {
+      document.getElementById('adminUnlockModal').style.display = 'flex';
+      document.getElementById('adminPinInput').focus();
+    }
+    function closeAdminUnlockModal() {
+      document.getElementById('adminUnlockModal').style.display = 'none';
+      document.getElementById('unlockErrorMsg').style.display = 'none';
+      document.getElementById('adminPinInput').value = '';
+    }
+    async function handleEmergencyUnlock(e) {
+      e.preventDefault();
+      const pin = document.getElementById('adminPinInput').value.trim();
+      const errBox = document.getElementById('unlockErrorMsg');
+      const submitBtn = document.getElementById('btnSubmitUnlock');
+      errBox.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Verifying...';
+
+      try {
+        const res = await fetch('/api/security/admin-emergency-unblock', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pin })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          localStorage.setItem('clonex_admin_token', data.token);
+          window.location.href = '/admin';
+        } else {
+          errBox.textContent = data.error || 'Invalid Admin PIN entered';
+          errBox.style.display = 'block';
+        }
+      } catch (err) {
+        errBox.textContent = 'Network error connecting to security daemon';
+        errBox.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Verify & Unblock';
+      }
+    }
+    (function() {
+      // Auto populate incident timestamp
+      const now = new Date();
+      document.getElementById('incidentTimestamp').textContent = now.toUTCString() + ' (' + now.toLocaleString() + ')';
+      
+      // Random incident hash
+      const randHash = Math.random().toString(36).substring(2, 8).toUpperCase();
+      document.getElementById('incidentId').textContent = 'INCIDENT #BLOCKED-' + randHash;
+
+      // Detect browser / device
+      const ua = navigator.userAgent;
+      let os = 'Unknown OS';
+      if (/Windows/i.test(ua)) os = 'Windows';
+      else if (/Android/i.test(ua)) os = 'Android OS';
+      else if (/iPhone|iPad|iPod/i.test(ua)) os = 'iOS (Apple)';
+      else if (/Macintosh|Mac OS/i.test(ua)) os = 'macOS';
+      else if (/Linux/i.test(ua)) os = 'Linux';
+
+      let browser = 'Generic Browser';
+      if (/Chrome/i.test(ua) && !/Edg/i.test(ua)) browser = 'Google Chrome';
+      else if (/Edg/i.test(ua)) browser = 'Microsoft Edge';
+      else if (/Firefox/i.test(ua)) browser = 'Mozilla Firefox';
+      else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) browser = 'Apple Safari';
+      else if (/Opera|OPR/i.test(ua)) browser = 'Opera Browser';
+
+      const isMobile = /Mobi|Android|iPhone/i.test(ua);
+      document.getElementById('clientDevice').textContent = (isMobile ? 'Mobile Device' : 'Desktop PC') + ' (' + os + ')';
+      document.getElementById('clientBrowser').textContent = browser;
+
+      // Fetch client IP if available from server or public API
+      fetch('/api/security/my-ip')
+        .then(r => r.json())
+        .then(d => {
+          if (d && d.ip) {
+            document.getElementById('clientIp').textContent = d.ip;
+          } else {
+            fallbackIp();
+          }
+        })
+        .catch(() => fallbackIp());
+
+      function fallbackIp() {
+        fetch('https://api.ipify.org?format=json')
+          .then(r => r.json())
+          .then(d => {
+            if (d && d.ip) document.getElementById('clientIp').textContent = d.ip;
+            else document.getElementById('clientIp').textContent = 'Logged on Server';
+          })
+          .catch(() => {
+            document.getElementById('clientIp').textContent = 'Logged on Server';
+          });
+      }
+    })();
+  </script>
+</body>
+</html>

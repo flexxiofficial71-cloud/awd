@@ -1,0 +1,63 @@
+# ==========================================================
+# CLONEX ESPORTS - LITESPEED / CPANEL / APACHE CONFIGURATION
+# ==========================================================
+
+# Default Charset
+AddDefaultCharset UTF-8
+
+# Directory Index priority
+DirectoryIndex index.html index.php admin.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Admin Panel Routing (/admin, /admin/)
+    RewriteRule ^admin/?$ admin/index.html [L,QSA]
+
+    # 2. APK Download Route
+    RewriteRule ^download/apk/?$ download.php [L,QSA]
+
+    # 3. API Routing for PHP environments (LiteSpeed / Apache)
+    RewriteRule ^api/(.*)$ api.php?route=$1 [QSA,L]
+
+    # 4. Clean Policy URLs (no .html extension needed)
+    RewriteRule ^privacy-policy/?$ privacy-policy.html [L]
+    RewriteRule ^terms-conditions/?$ terms-conditions.html [L]
+    RewriteRule ^refund-policy/?$ refund-policy.html [L]
+    RewriteRule ^cookie-policy/?$ cookie-policy.html [L]
+
+    # 5. Automatically resolve any existing .html file without extension
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L,QSA]
+</IfModule>
+
+# Prevent stale browser caching during updates
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Ensure proper MIME types
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType application/vnd.android.package-archive .apk
+    AddType image/svg+xml .svg
+    AddType image/png .png
+    AddType image/webp .webp
+</IfModule>
+
+# Enable Gzip / Deflate Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>

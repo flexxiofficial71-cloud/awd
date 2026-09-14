@@ -62,8 +62,135 @@
   <link rel="apple-touch-icon" href="assets/logo.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Cache Control (Forces mobile browsers & CDN to fetch latest updates immediately) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Master Stylesheet with Cache Busting Version Tag -->
+  <link rel="stylesheet" href="styles.css?v=2.6.0">
+
+  <!-- Critical Mobile Responsive CSS: Embedded directly so hosting & mobile browsers instantly display new layout -->
+  <style id="critical-mobile-style">
+    @media screen and (max-width: 767px) {
+      .why-grid, .how-grid, .features-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 14px !important;
+        padding: 6px 20px 20px !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        cursor: grab;
+        user-select: none;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+      }
+      .why-grid::-webkit-scrollbar,
+      .how-grid::-webkit-scrollbar,
+      .features-grid::-webkit-scrollbar,
+      .why-grid::-webkit-scrollbar-track,
+      .how-grid::-webkit-scrollbar-track,
+      .features-grid::-webkit-scrollbar-track,
+      .why-grid::-webkit-scrollbar-thumb,
+      .how-grid::-webkit-scrollbar-thumb,
+      .features-grid::-webkit-scrollbar-thumb {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        background: transparent !important;
+      }
+      .why-card, .how-card, .feature-card {
+        flex: 0 0 232px !important;
+        width: 232px !important;
+        min-width: 232px !important;
+        max-width: 240px !important;
+        scroll-snap-align: start !important;
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-self: stretch !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+      }
+      .why-icon-pod, .feat-icon-pod {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        margin-bottom: 14px !important;
+      }
+      .why-icon-pod svg, .feat-icon-pod svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+      .why-card-title, .feature-title, .step-title {
+        font-size: 15.5px !important;
+        line-height: 22px !important;
+        font-weight: 800 !important;
+        margin-bottom: 8px !important;
+      }
+      .why-card-desc, .feature-desc, .step-desc {
+        font-size: 13px !important;
+        line-height: 19.5px !important;
+        color: #475569 !important;
+        flex-grow: 1 !important;
+      }
+      .feature-chip {
+        font-size: 11px !important;
+        padding: 4px 10px !important;
+        border-radius: 6px !important;
+        width: fit-content;
+        margin-top: auto;
+      }
+      .mobile-swipe-hint {
+        display: none !important;
+      }
+      .footer-section {
+        padding: 56px 16px 36px !important;
+        background: #f8fafc !important;
+        border-top: 1px solid #e2e8f0 !important;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+      .footer-col-nav, .footer-col-legal {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 18px !important;
+        padding: 18px 14px !important;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+      }
+      .footer-col-community {
+        grid-column: 1 / -1 !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 18px !important;
+        padding: 20px 18px !important;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+        text-align: center !important;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      .why-card, .how-card, .feature-card {
+        flex: 0 0 215px !important;
+        width: 215px !important;
+        min-width: 215px !important;
+        max-width: 220px !important;
+        padding: 18px 14px !important;
+        align-self: stretch !important;
+        height: auto !important;
+      }
+    }
+  </style>
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -366,7 +493,7 @@
               <span class="step-num">01</span>
             </div>
             <h3 class="step-title">Download APK</h3>
-            <p class="step-desc">Download the free Clonex Esports APK file directly onto your Android phone and install it with one tap.</p>
+            <p class="step-desc">Download the free Clonex Esports official APK file directly to your Android device and install it safely in under 30 seconds.</p>
           </div>
 
           <!-- Step 2 -->
@@ -381,7 +508,7 @@
               <span class="step-num">02</span>
             </div>
             <h3 class="step-title">Add Wallet Balance</h3>
-            <p class="step-desc">Top up your wallet using bKash or Nagad in 30 seconds to participate in paid tournaments.</p>
+            <p class="step-desc">Instantly top up your in-app wallet balance using personal bKash or Nagad accounts to participate in daily paid tournaments.</p>
           </div>
 
           <!-- Step 3 -->
@@ -396,7 +523,7 @@
               <span class="step-num">03</span>
             </div>
             <h3 class="step-title">Join Match &amp; Room</h3>
-            <p class="step-desc">Select your game mode (Solo, Duo, Squad) and copy your private custom Room ID to enter the match on time.</p>
+            <p class="step-desc">Select your favorite match (Solo, Duo, or Squad) and receive your private Custom Room ID and password directly in the app.</p>
           </div>
 
           <!-- Step 4 -->
@@ -415,7 +542,7 @@
               <span class="step-num">04</span>
             </div>
             <h3 class="step-title">Win &amp; Cashout</h3>
-            <p class="step-desc">Eliminate rivals, secure the Booyah, and request your cashout directly into your bKash or Nagad wallet.</p>
+            <p class="step-desc">Defeat opponents, secure the Booyah, and withdraw your winning cash rewards instantly to your personal bKash or Nagad wallet.</p>
           </div>
         </div>
       </div>
@@ -509,7 +636,7 @@
             <span>OFFICIAL ANDROID RELEASE</span>
           </div>
           <h2 class="cta-title">Ready to Dominate the Battlefield?</h2>
-          <p class="cta-desc">Download Clonex Esports v1.0 today. Join over 50,000 players and win real cash in every single custom match.</p>
+          <p class="cta-desc">Download Clonex Esports today. Compete in daily custom rooms, showcase your skills, and win real cash in every single match.</p>
         </div>
         <a href="assets/Clonex-Esports-v1.0.apk" download="Clonex-Esports-v1.0.apk" class="footer-download-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -814,6 +941,33 @@
     initHorizontalAutoScroll('howGrid', 3000);
     initHorizontalAutoScroll('featuresGrid', 3400);
 
+    // Guaranteed equal height across all card rails on all browsers
+    function equalizeGridCards() {
+      ['whyGrid', 'howGrid', 'featuresGrid'].forEach(id => {
+        const grid = document.getElementById(id);
+        if (!grid) return;
+        const cards = grid.querySelectorAll('.why-card, .how-card, .feature-card');
+        if (!cards.length) return;
+        cards.forEach(c => c.style.minHeight = '');
+        let maxH = 0;
+        cards.forEach(c => {
+          const h = c.offsetHeight;
+          if (h > maxH) maxH = h;
+        });
+        if (maxH > 0) {
+          cards.forEach(c => c.style.minHeight = maxH + 'px');
+        }
+      });
+    }
+
+    window.addEventListener('load', equalizeGridCards);
+    window.addEventListener('resize', equalizeGridCards);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(equalizeGridCards);
+    }
+    setTimeout(equalizeGridCards, 250);
+    setTimeout(equalizeGridCards, 800);
+
     // Dynamic Settings Sync from Admin Panel
     async function syncDynamicSettings() {
       try {
@@ -837,14 +991,16 @@
           });
         }
 
-        if (data.apkDownloadUrl) {
+        if (data.apkDownloadUrl || data.apkSourceType) {
           const downloadLinks = document.querySelectorAll('a[download], .nav-apk-btn, .drawer-download-btn, #heroDownloadBtn, .footer-download-btn');
           downloadLinks.forEach(a => {
-            a.href = data.apkDownloadUrl;
             if (data.apkSourceType === 'url') {
+              a.href = data.apkDownloadUrl || data.apkUrl;
               a.removeAttribute('download');
               a.target = '_blank';
             } else {
+              a.href = '/download/apk';
+              a.removeAttribute('target');
               a.setAttribute('download', data.apkFilename || 'Clonex-Esports.apk');
             }
           });
